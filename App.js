@@ -19,21 +19,29 @@ const platform = Platform.select({
 
 type Props = {};
 export default class App extends Component<Props> {
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.intro}>
-          Star Wars
-        </Text>
-        <Text style={styles.platform}>
-          Good stuff here
-        </Text>
-        <Text style={styles.platform}>
-          {platform}
-        </Text>
-      </View>
-    );
+  getInitialState: function() {
+  return {
+    person: "",
+    starship: "",
+    vehicle: "",
+    planet: ""
   }
+}
+render() {
+  return (
+    <View style={styles.container}>
+      <Text style={styles.intro}>
+        Star Wars
+        </Text>
+      <Text style={styles.platform}>
+        Good stuff here
+        </Text>
+      <Text style={styles.platform}>
+        {platform}
+      </Text>
+    </View>
+  );
+}
 }
 
 const styles = StyleSheet.create({
