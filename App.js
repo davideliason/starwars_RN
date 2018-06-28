@@ -22,7 +22,7 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
+        <Text style={styles.intro}>
           Star Wars
         </Text>
         <Text style={styles.platform}>
@@ -43,12 +43,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  welcome: {
+  intro: {
     fontSize: 20,
     textAlign: 'center',
     margin: 10,
   },
-  instructions: {
+  platform: {
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
