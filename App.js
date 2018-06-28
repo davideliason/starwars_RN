@@ -17,8 +17,12 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      person: "",
-      tempPerson: "",
+      livingBeing: "",
+      templivingBeing: "",
+      starship: "",
+      tempStarship: "",
+      planet: "",
+      tempPlanet: ""
     };
   }
   render() {
@@ -28,12 +32,12 @@ export default class App extends Component {
           Star Wars Info
         </Text>
         <Text style={styles.intro}>
-          Let's Learn about a person, planet, or...
+          Learn about a living being, planet, or starship..
         </Text>
         <TextInput
           style={styles.input}
-          placeholder="find a person (or Wookie)"
-          onChangeEditing={(text => this.setState({ tempPerson }))}
+          placeholder="Find a living being"
+          onChangeEditing={(text => this.setState({ templivingBeing }))}
         />
       </View>
     );
