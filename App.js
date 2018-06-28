@@ -22,7 +22,9 @@ export default class App extends Component {
       starship: "",
       tempStarship: "",
       planet: "",
-      tempPlanet: ""
+      tempPlanet: "",
+      text: "",
+      data: ""
     };
   }
   render() {
@@ -34,11 +36,17 @@ export default class App extends Component {
         <Text style={styles.intro}>
           Learn about a living being, planet, or starship..
         </Text>
+
         <TextInput
           style={styles.input}
           placeholder="Find a living being"
-          onChangeEditing={(text => this.setState({ templivingBeing }))}
+          onChangeText={(data) => this.setState({ data })}
         />
+
+        <Text style={styles.intro}>
+          Data: {this.state.data}
+        </Text>
+
       </View>
     );
   }
