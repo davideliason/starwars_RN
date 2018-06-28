@@ -40,11 +40,11 @@ export default class App extends Component {
         <TextInput
           style={styles.input}
           placeholder="Find a living being"
-          onChangeText={(data) => this.setState({ data })}
+          onChangeText={(templivingBeing) => this.setState({ templivingBeing })}
         />
 
         <Text style={styles.intro}>
-          Data: {this.state.data}
+          templivingBeing: {this.state.templivingBeing}
         </Text>
 
       </View>
