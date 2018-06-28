@@ -17,8 +17,13 @@ const platform = Platform.select({
   android: 'Android',
 });
 
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      person: "Luke Skywalker"
+    };
+  }
   render() {
     return (
       <View style={styles.container}>
@@ -26,7 +31,7 @@ export default class App extends Component<Props> {
           Star Wars
         </Text>
         <Text style={styles.platform}>
-          Good stuff here
+          Person: {this.state.person}
         </Text>
         <Text style={styles.platform}>
           {platform}
