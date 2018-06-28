@@ -9,33 +9,32 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  TextInput
 } from 'react-native';
-
-const platform = Platform.select({
-  ios: 'IOS',
-  android: 'Android',
-});
 
 export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      person: "Luke Skywalker"
+      person: "",
+      tempPerson: "",
     };
   }
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.intro}>
-          Star Wars
+          Star Wars Info
         </Text>
-        <Text style={styles.platform}>
-          Person: {this.state.person}
+        <Text style={styles.intro}>
+          Let's Learn about a person, planet, or...
         </Text>
-        <Text style={styles.platform}>
-          {platform}
-        </Text>
+        <TextInput
+          style={styles.input}
+          placeholder="find a person (or Wookie)"
+          onChangeEditing={(text => this.setState({ tempPerson }))}
+        />
       </View>
     );
   }
@@ -53,7 +52,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     margin: 10,
   },
-  platform: {
+  input: {
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
